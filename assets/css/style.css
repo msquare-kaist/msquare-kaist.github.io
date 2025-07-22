@@ -19,8 +19,9 @@ font-family: 'Poppins', sans-serif;
 7.  Experience
 8.  Profiles
 9.  Portfolio
-10. Clients
-11. Contact
+10. Departments
+11. Clients
+12. Contact
 
 /*-------------------------------------
 		1.General css (Reset code)
@@ -104,7 +105,8 @@ html,body{
     position: relative;
     z-index: 9999;
 }
-@media (min-width: 1024px){}
+@media (max-width: 767px){}
+
 nav.navbar.bootsnav.no-background {
     background-color: #fff;
     border: none;
@@ -369,9 +371,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 /*-------------------------------------
         6.  Skills
 --------------------------------------*/
-.skills {
-    
-}
+
 .skill-content{padding: 50px 0 80px;}
 .single-skill-content{padding-top: 100px;}
 .section-heading h2 {
@@ -379,7 +379,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     font-weight: 600;
     text-transform: uppercase;
     padding-bottom: 50px;
-    border-bottom: 1px solid #e5ebf2;
+    /*border-bottom: 1px solid #e5ebf2;*/
 }
 .single-progress-txt {
     display: flex;
@@ -591,6 +591,8 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 }
 .single-profile:hover .profile-icon-name,.single-profile:hover .profile-txt a>i{color: #fff;}
 .single-profile:hover .profile-border {border:transparent;}
+
+
 /*-------------------------------------
         9. Portfolio
 --------------------------------------*/
@@ -629,6 +631,18 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     -o-transform:scale(1.5);
     transform:scale(1.5);
 }/*.item img*/
+.isotope .itema:hover  img{
+    -webkit-transform:scale(1);
+    -moz-transform:scale(1);
+    -ms-transform:scale(1);
+    -o-transform:scale(1);
+    transform:scale(1);
+}/*.item img*/
+
+.itema {
+    padding-top:30px;
+    padding-bottom:30px;
+}
 
 /*.isotope-overlay*/
 .isotope-overlay{
@@ -668,12 +682,40 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 }/*.isotope-overlay*/
 
 /*-------------------------------------
-        10. Clients
+        10. Department
+--------------------------------------*/
+
+.department {
+    padding: 50px 0 100px;
+    border: 1px solid #e5ebf2
+}
+
+.department-content {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.item1, .item2, .item3, .item4, .item5 {
+    flex-basis:auto;
+
+}
+@media (max-width:767px) {
+    .department-content {
+        flex-direction: column;
+    }
+    .item1, .item2, .item3, .item4, .item5 {
+        padding:1.3em 0;
+    }
+}
+/*-------------------------------------
+        11. Clients
 --------------------------------------*/
 .clients {padding-top: 50px;}
 .clients-area {
     display: flex;
     align-items: center;
+    justify-content:center;
     height: 250px;
 }
 .clients-area .item {padding: 0 25px;}
@@ -681,12 +723,16 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 .clients .clients-area .owl-carousel .owl-item img {
     display: block;
     width: 100%;
+    overflow-x: hidden;
     height: auto;
     border-radius:0;
 }
 
+
+
+
 /*-------------------------------------
-        11. Contact
+        12. Contact
 --------------------------------------*/
 .contact {
     background: #f9fbfd;
@@ -781,9 +827,9 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 /*.contact-add-info */
 
 /*hm-foot-icon*/
-.hm-foot-icon {
+/*.hm-foot-icon {
    
-}
+}*/
 .hm-foot-icon ul li{float:left;}
 .hm-foot-icon ul li>a {
     color: #636a82;
